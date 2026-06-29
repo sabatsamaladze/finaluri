@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>კონტაქტი — Tbilisi Bites</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/animations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Unbounded:wght@300;400;700&family=Noto+Sans+Georgian:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <p>🍪 ჩვენ ვიყენებთ Cookies.</p>
+      <button id="acceptCookies" class="btn-cookie">მიღება</button>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar">
+      <a href="./index.html" class="logo">
+        <span class="logo-geo">🍷</span>
+        <span class="logo-text">Tbilisi<em>Bites</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="./index.html">მთავარი</a></li>
+        <li><a href="./menu.html">მენიუ</a></li>
+        <li><a href="./about.html">ჩვენს შესახებ</a></li>
+        <li><a href="./contact.html" class="active">კონტაქტი</a></li>
+      </ul>
+      <button class="burger" id="burgerBtn" aria-label="მენიუ">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="reveal">დაგვიკავშირდით</h1>
+        <p class="reveal">მაგიდის დაჯავშნა ან კითხვა? ჩვენ გველით!</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Contact Info -->
+          <aside class="contact-info reveal">
+            <h2>ინფორმაცია</h2>
+            <ul class="info-list">
+              <li>
+                <span class="info-icon">📍</span>
+                <div>
+                  <strong>მისამართი</strong>
+                  <p>რუსთაველის გამზ. 22, თბილისი</p>
+                </div>
+              </li>
+              <li>
+                <span class="info-icon">📞</span>
+                <div>
+                  <strong>ტელეფონი</strong>
+                  <p>+995 32 222 33 44</p>
+                </div>
+              </li>
+              <li>
+                <span class="info-icon">✉️</span>
+                <div>
+                  <strong>ელ-ფოსტა</strong>
+                  <p>hello@tbilisibites.ge</p>
+                </div>
+              </li>
+              <li>
+                <span class="info-icon">🕐</span>
+                <div>
+                  <strong>სამუშაო საათები</strong>
+                  <p>ყოველდღე: 12:00 – 24:00</p>
+                </div>
+              </li>
+            </ul>
+            <div class="map-placeholder">
+              <div class="map-emoji">🗺️</div>
+              <p>თბილისი, საქართველო</p>
+            </div>
+          </aside>
+
+          <!-- Reservation / Contact Form -->
+          <div class="form-wrap reveal">
+            <h2>მაგიდის <em>დაჯავშნა</em></h2>
+
+            <div class="form-tabs" id="formTabs">
+              <button class="tab-btn active" data-tab="reservation">დაჯავშნა</button>
+              <button class="tab-btn" data-tab="contact">კითხვა</button>
+            </div>
+
+            <!-- Reservation Form -->
+            <form class="contact-form tab-content active" id="reservationForm" data-tab-content="reservation" novalidate>
+              <div class="form-group">
+                <label for="resName">სახელი და გვარი *</label>
+                <input type="text" id="resName" name="name" placeholder="მაგ: გიორგი კობახიძე" autocomplete="name" />
+                <span class="field-error" id="resNameErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="resPhone">ტელეფონი *</label>
+                <input type="tel" id="resPhone" name="phone" placeholder="+995 5XX XXX XXX" autocomplete="tel" />
+                <span class="field-error" id="resPhoneErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="resEmail">ელ-ფოსტა *</label>
+                <input type="email" id="resEmail" name="email" placeholder="name@example.com" autocomplete="email" />
+                <span class="field-error" id="resEmailErr"></span>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="resDate">თარიღი *</label>
+                  <input type="date" id="resDate" name="date" />
+                  <span class="field-error" id="resDateErr"></span>
+                </div>
+                <div class="form-group">
+                  <label for="resTime">დრო *</label>
+                  <input type="time" id="resTime" name="time" min="12:00" max="23:00" />
+                  <span class="field-error" id="resTimeErr"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="resGuests">სტუმრების რაოდენობა *</label>
+                <select id="resGuests" name="guests">
+                  <option value="">აირჩიეთ</option>
+                  <option value="1">1 სტუმარი</option>
+                  <option value="2">2 სტუმარი</option>
+                  <option value="3-4">3-4 სტუმარი</option>
+                  <option value="5-6">5-6 სტუმარი</option>
+                  <option value="7+">7+ სტუმარი</option>
+                </select>
+                <span class="field-error" id="resGuestsErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="resNote">შენიშვნა (სურვილისამებრ)</label>
+                <textarea id="resNote" name="note" placeholder="ალერგია, სპეციალური მოთხოვნა..." rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn-primary btn-full">დაჯავშნა</button>
+              <div class="form-success" id="resSuccess" style="display:none">
+                ✅ თქვენი მაგიდა დაიჯავშნა! გამოგვიგზავნეთ ახალი ჯავშანი.
+              </div>
+            </form>
+
+            <!-- Contact Form -->
+            <form class="contact-form tab-content" id="contactForm" data-tab-content="contact" novalidate>
+              <div class="form-group">
+                <label for="ctName">სახელი *</label>
+                <input type="text" id="ctName" name="name" placeholder="თქვენი სახელი" />
+                <span class="field-error" id="ctNameErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="ctEmail">ელ-ფოსტა *</label>
+                <input type="email" id="ctEmail" name="email" placeholder="name@example.com" />
+                <span class="field-error" id="ctEmailErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="ctPassword">პაროლი (ანგარიშისთვის) *</label>
+                <div class="password-wrap">
+                  <input type="password" id="ctPassword" name="password" placeholder="მინ. 8 სიმბოლო" />
+                  <button type="button" class="toggle-pwd" id="togglePwd" aria-label="პაროლის ჩვენება">👁</button>
+                </div>
+                <span class="field-error" id="ctPwdErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="ctMsg">შეტყობინება *</label>
+                <textarea id="ctMsg" name="message" placeholder="თქვენი კითხვა ან კომენტარი..." rows="4"></textarea>
+                <span class="field-error" id="ctMsgErr"></span>
+              </div>
+              <button type="submit" class="btn-primary btn-full">გაგზავნა</button>
+              <div class="form-success" id="ctSuccess" style="display:none">
+                ✅ შეტყობინება გაიგზავნა! მალე დაგიკავშირდებით.
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-text">Tbilisi<em>Bites</em></span>
+          <p>ქართული სამზარეულოს სული.</p>
+        </div>
+        <nav class="footer-nav">
+          <h4>ნავიგაცია</h4>
+          <ul>
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="menu.html">მენიუ</a></li>
+            <li><a href="about.html">ჩვენს შესახებ</a></li>
+            <li><a href="contact.html">კონტაქტი</a></li>
+          </ul>
+        </nav>
+        <address class="footer-contact">
+          <h4>კონტაქტი</h4>
+          <p>📍 რუსთაველის გამზ. 22, თბილისი</p>
+          <p>📞 +995 32 222 33 44</p>
+          <p>🕐 12:00 – 24:00</p>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 TbilisiBites. ყველა უფლება დაცულია.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="ზემოთ">↑</button>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/form.js"></script>
+</body>
+</html>

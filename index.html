@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tbilisi Bites — ავთენტური ქართული სამზარეულო</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/animations.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Unbounded:wght@300;400;700&family=Noto+Sans+Georgian:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Cookie Notification -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <p>🍪 ჩვენ ვიყენებთ Cookies თქვენი გამოცდილების გასაუმჯობესებლად.</p>
+      <button id="acceptCookies" class="btn-cookie">მიღება</button>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <span class="logo-geo">🍷</span>
+        <span class="logo-text">Tbilisi<em>Bites</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="./index.html" class="active">მთავარი</a></li>
+        <li><a href="./menu.html">მენიუ</a></li>
+        <li><a href="./about.html">ჩვენს შესახებ</a></li>
+        <li><a href="./contact.html">კონტაქტი</a></li>
+      </ul>
+      <button class="burger" id="burgerBtn" aria-label="მენიუ">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-text">GEORGIA</div>
+      <div class="hero-content reveal">
+        <span class="hero-tag">1987 წლიდან თბილისში</span>
+        <h1>სამზარეულო,<br/><em>სული</em> გაქვს</h1>
+        <p>ავთენტური ქართული კერძები, ოჯახური რეცეპტები და<br/>კახური ღვინო — ერთი სახურავქვეშ.</p>
+        <div class="hero-cta">
+          <a href="./Menu.html" class="btn-primary">მენიუს ნახვა</a>
+          <a href="./Contact.html" class="btn-outline">მაგიდის დაჯავშნა</a>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <div class="hero-plate">
+          <div class="food-emoji-large">🥘</div>
+        </div>
+        <div class="floating-badge">✦ ყოველდღიური სპეციალური კერძი</div>
+      </div>
+      <div class="scroll-hint">
+        <span>ქვემოთ</span>
+        <div class="scroll-arrow">↓</div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="features-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon">🫕</div>
+            <h3>ავთენტური რეცეპტები</h3>
+            <p>სამი თაობის ოჯახური ტრადიციები ყოველ კერძში</p>
+          </article>
+          <article class="feature-card reveal" style="--delay:0.1s">
+            <div class="feature-icon">🍷</div>
+            <h3>კახური ღვინო</h3>
+            <p>120+ სახეობის ქართული ღვინო კახეთის საუკეთესო მარნებიდან</p>
+          </article>
+          <article class="feature-card reveal" style="--delay:0.2s">
+            <div class="feature-icon">🌿</div>
+            <h3>ახალი პროდუქტები</h3>
+            <p>ყოველდღიურად ადგილობრივი ფერმებიდან პირდაპირ სამზარეულოში</p>
+          </article>
+          <article class="feature-card reveal" style="--delay:0.3s">
+            <div class="feature-icon">🎻</div>
+            <h3>ცოცხალი მუსიკა</h3>
+            <p>პარასკევი–შაბათი ქართული ხალხური და ეთნო-ჯაზი</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Dishes -->
+    <section class="featured-dishes" id="dishes">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">რჩეული კერძები</span>
+          <h2>დღის <em>სპეციალური</em></h2>
+        </header>
+        <div class="dishes-grid" id="dishesGrid">
+          <!-- Populated by JS / API -->
+          <div class="dish-card reveal">
+            <div class="dish-img">🫓</div>
+            <div class="dish-info">
+              <h4>ხაჭაპური</h4>
+              <p>ადჟარული, კლასიკური ან მეგრული</p>
+              <span class="price">18 ₾</span>
+            </div>
+          </div>
+          <div class="dish-card reveal" style="--delay:0.1s">
+            <div class="dish-img">🥩</div>
+            <div class="dish-info">
+              <h4>მწვადი</h4>
+              <p>ნახშირზე შემწვარი, ახალი ბოსტნეულით</p>
+              <span class="price">32 ₾</span>
+            </div>
+          </div>
+          <div class="dish-card reveal" style="--delay:0.2s">
+            <div class="dish-img">🥟</div>
+            <div class="dish-info">
+              <h4>ხინკალი</h4>
+              <p>ხელნაკეთი, ქინძის სოუსით</p>
+              <span class="price">12 ₾</span>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="menu.html" class="btn-primary">სრული მენიუ</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weather Widget (API) -->
+    <section class="weather-section" id="weatherSection">
+      <div class="container">
+        <div class="weather-wrap reveal">
+          <div class="weather-text">
+            <h3>დღეს თბილისში</h3>
+            <p>გარეთ კარგი ამინდია? ან ცუდი? — ნებისმიერ შემთხვევაში, ჩვენი სუფრა გელის 🍽️</p>
+          </div>
+          <div class="weather-card" id="weatherCard">
+            <div class="weather-loading">ამინდი იტვირთება...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">სტუმრების აზრი</span>
+          <h2>ისინი <em>ამბობენ</em></h2>
+        </header>
+        <div class="testimonials-grid" id="testimonialsGrid">
+          <!-- Populated by randomuser API -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservation CTA -->
+    <section class="cta-section reveal">
+      <div class="container">
+        <div class="cta-inner">
+          <h2>დაჯავშნეთ მაგიდა<br/><em>უახლოეს ღამეს</em></h2>
+          <p>ჩვენ ვმუშაობთ ყოველდღე 12:00–24:00</p>
+          <a href="contact.html" class="btn-primary">დაჯავშნა</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-text">Tbilisi<em>Bites</em></span>
+          <p>ქართული სამზარეულოს სული თბილისის გულში.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="TripAdvisor">⭐</a>
+          </div>
+        </div>
+        <nav class="footer-nav">
+          <h4>ნავიგაცია</h4>
+          <ul>
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="menu.html">მენიუ</a></li>
+            <li><a href="about.html">ჩვენს შესახებ</a></li>
+            <li><a href="contact.html">კონტაქტი</a></li>
+          </ul>
+        </nav>
+        <address class="footer-contact">
+          <h4>კონტაქტი</h4>
+          <p>📍 რუსთაველის გამზ. 22, თბილისი</p>
+          <p>📞 +995 32 222 33 44</p>
+          <p>✉️ hello@tbilisibites.ge</p>
+          <p>🕐 12:00 – 24:00</p>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 TbilisiBites. ყველა უფლება დაცულია.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="ზემოთ">↑</button>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/weather.js"></script>
+  <script src="./js/testimonials.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>მენიუ — Tbilisi Bites</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/animations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Unbounded:wght@300;400;700&family=Noto+Sans+Georgian:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <p>🍪 ჩვენ ვიყენებთ Cookies თქვენი გამოცდილების გასაუმჯობესებლად.</p>
+      <button id="acceptCookies" class="btn-cookie">მიღება</button>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar">
+      <a href="./index.html" class="logo">
+        <span class="logo-geo">🍷</span>
+        <span class="logo-text">Tbilisi<em>Bites</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="./index.html">მთავარი</a></li>
+        <li><a href="./menu.html" class="active">მენიუ</a></li>
+        <li><a href="./about.html">ჩვენს შესახებ</a></li>
+        <li><a href="./contact.html">კონტაქტი</a></li>
+      </ul>
+      <button class="burger" id="burgerBtn" aria-label="მენიუ">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="reveal">ჩვენი <em>მენიუ</em></h1>
+        <p class="reveal">ყოველი კერძი — ისტორია</p>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <div class="container">
+
+        <!-- Category Filter -->
+        <div class="menu-filters reveal" id="menuFilters">
+          <button class="filter-btn active" data-filter="all">ყველა</button>
+          <button class="filter-btn" data-filter="starters">სალათები</button>
+          <button class="filter-btn" data-filter="mains">მთავარი კერძი</button>
+          <button class="filter-btn" data-filter="bread">პური & ხბო</button>
+          <button class="filter-btn" data-filter="drinks">სასმელი</button>
+          <button class="filter-btn" data-filter="desserts">დესერტი</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+          <!-- Starters -->
+          <article class="menu-item reveal" data-cat="starters">
+            <div class="menu-item-img">🥗</div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>პხალი</h3>
+                <span class="price">14 ₾</span>
+              </div>
+              <p>ისპანახი, ჭარხალი, კარტოფილი — ნიგვზით და ქინძით</p>
+              <div class="tags"><span class="tag veg">🌱 ვეგ</span></div>
+            </div>
+          </article>
+          <article class="menu-item reveal" data-cat="starters" style="--delay:0.05s">
+            <div class="menu-item-img">🫙</div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>ბადრიჯანი</h3>
+                <span class="price">16 ₾</span>
+              </div>
+              <p>შემწვარი ბადრიჯანი, ნიგვზის პასტა, ბროწეულის მარცვლები</p>
+              <div class="tags"><span class="tag veg">🌱 ვეგ</span></div>
+            </div>
+          </article>
+          <article class="menu-item reveal" data-cat="starters" style="--delay:0.1s">
+            <div class="menu-item-img">🥘</div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>სოლიანკა</h3>
+                <span class="price">18 ₾</span>
+              </div>
+              <p>ტრადიციული სუნელებით, ახალი ბოსტნეულით</p>
+            </div>
+          </article>
+
+          <!-- Mains -->
+          <article class="menu-item reveal" data-cat="mains">
+            <div class="menu-item-img">🥩</div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>მწვადი</h3>
+                <span class="price">32 ₾</span>
+              </div>
+              <p>ნახშირზე შემწვარი ხბო, ახალი ბოსტნეული, ქლიავის სოუსი</p>
+              <div class="tags"><span class="tag popular">⭐ პოპულარული</span></div>
+            </div>
+          </article>
+          <article class="menu-item reveal" data-cat="mains" style="--delay:0.05s">
+            <div class="menu-item-img">🍲</div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>ჩაქაფული</h3>
+                <span class="price">28 ₾</span>
+              </div>
+              <p>კრაზანა, ეხნა, ტარხუნა — სეზონური სპეციალობა</p>
+              <div class="tags"><span class="tag seasonal">🌸 სეზონური</span></div>
+            </div>
+          </article>
+          <article class="menu-item reveal" data-cat="mains" style="--delay:0.1s">
+            <div class="menu-item-img">🫕</div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>ჩახოხბილი</h3>
+                <span class="price">26 ₾</span>
+              </div>
+              <p>ქათამი, პომიდორი, ახალი სუნელები — ქვაბში მოხარშული</p>
+              <div class="tags"><span class="tag popular">⭐ პოპულარული</span></div>
+            </div>
+          </article>
+          <article class="menu-item reveal" data-cat="mains" style="--delay:0.15s">
+            <div class="menu-item-img">🐟</div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>კალმახი</h3>
+                <span class="price">34 ₾</span>
+              </div>
+              <p>მთის კალმახი ნიგვზის სოუსით, ლიმონი, კაპარჭი</p>
+            </div>
+          </article>
+
+          <!-- Bread -->
+          <article class="menu-item reveal" data-cat="bread">
+            <div class="menu-item-img">🫓</div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>ადჟარული ხაჭაპური</h3>
+                <span class="price">18 ₾</span>
+              </div>
+              <p>ახალი სულგუნი, კვერცხი, კარაქი</p>
+              <div class="tags"><span class="tag popular">⭐ პოპულარული</span></div>
+            </div>
+          </article>
+          <article class="menu-item reveal" data-cat="bread" style="--delay:0.05s">
+            <div class="menu-item-img">🥟</div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>ხინკალი (6 ც)</h3>
+                <span class="price">12 ₾</span>
+              </div>
+              <p>ხელნაკეთი, ქინძის სოუსით</p>
+              <div class="tags"><span class="tag popular">⭐ პოპულარული</span></div>
+            </div>
+          </article>
+          <article class="menu-item reveal" data-cat="bread" style="--delay:0.1s">
+            <div class="menu-item-img">🍞</div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>მჭადი</h3>
+                <span class="price">8 ₾</span>
+              </div>
+              <p>სიმინდის პური, ახლად გამომცხვარი, ნაჭდევით</p>
+              <div class="tags"><span class="tag veg">🌱 ვეგ</span></div>
+            </div>
+          </article>
+
+          <!-- Drinks -->
+          <article class="menu-item reveal" data-cat="drinks">
+            <div class="menu-item-img">🍷</div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>კახური წითელი (კვერი)</h3>
+                <span class="price">22 ₾</span>
+              </div>
+              <p>ყველა ღვინო ადგილობრივი მარნებიდან</p>
+            </div>
+          </article>
+          <article class="menu-item reveal" data-cat="drinks" style="--delay:0.05s">
+            <div class="menu-item-img">🍵</div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>ქართული ჩაი</h3>
+                <span class="price">6 ₾</span>
+              </div>
+              <p>ბათუმის ჩაი, ჩირი, მაწონი</p>
+            </div>
+          </article>
+          <article class="menu-item reveal" data-cat="drinks" style="--delay:0.1s">
+            <div class="menu-item-img">🍹</div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>ლიმონათი</h3>
+                <span class="price">9 ₾</span>
+              </div>
+              <p>ახალი ხილისგან, ქართული ტყის კენკრა</p>
+            </div>
+          </article>
+
+          <!-- Desserts -->
+          <article class="menu-item reveal" data-cat="desserts">
+            <div class="menu-item-img">🍯</div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>გოზინაყი</h3>
+                <span class="price">10 ₾</span>
+              </div>
+              <p>კახური თაფლი, ნიგვზი, ვახტანგ მეფის რეცეპტი</p>
+            </div>
+          </article>
+          <article class="menu-item reveal" data-cat="desserts" style="--delay:0.05s">
+            <div class="menu-item-img">🍇</div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>ჩურჩხელა</h3>
+                <span class="price">8 ₾</span>
+              </div>
+              <p>ყურძნის წვენი, ნიგვზი — ხელნაკეთი</p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-text">Tbilisi<em>Bites</em></span>
+          <p>ქართული სამზარეულოს სული თბილისის გულში.</p>
+        </div>
+        <nav class="footer-nav">
+          <h4>ნავიგაცია</h4>
+          <ul>
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="menu.html">მენიუ</a></li>
+            <li><a href="about.html">ჩვენს შესახებ</a></li>
+            <li><a href="contact.html">კონტაქტი</a></li>
+          </ul>
+        </nav>
+        <address class="footer-contact">
+          <h4>კონტაქტი</h4>
+          <p>📍 რუსთაველის გამზ. 22, თბილისი</p>
+          <p>📞 +995 32 222 33 44</p>
+          <p>🕐 12:00 – 24:00</p>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 TbilisiBites. ყველა უფლება დაცულია.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="ზემოთ">↑</button>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/menu.js"></script>
+</body>
+</html>

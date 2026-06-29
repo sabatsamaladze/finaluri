@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ჩვენს შესახებ — Tbilisi Bites</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/animations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Unbounded:wght@300;400;700&family=Noto+Sans+Georgian:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <p>🍪 ჩვენ ვიყენებთ Cookies.</p>
+      <button id="acceptCookies" class="btn-cookie">მიღება</button>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar">
+      <a href="./index.html" class="logo">
+        <span class="logo-geo">🍷</span>
+        <span class="logo-text">Tbilisi<em>Bites</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="./index.html">მთავარი</a></li>
+        <li><a href="./menu.html">მენიუ</a></li>
+        <li><a href="./about.html" class="active">ჩვენს შესახებ</a></li>
+        <li><a href="./contact.html">კონტაქტი</a></li>
+      </ul>
+      <button class="burger" id="burgerBtn" aria-label="მენიუ">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="reveal">ჩვენს <em>შესახებ</em></h1>
+        <p class="reveal">1987 წლიდან სამზარეულოში</p>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="about-story">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-text reveal">
+            <span class="section-tag">ჩვენი ისტორია</span>
+            <h2>სამი თაობის <em>ტრადიცია</em></h2>
+            <p>1987 წელს, ბებია ნინო კობახიძემ გახსნა პატარა ოჯახური სასადილო ვარაზის ხევის ქუჩაზე. მისი ოცნება იყო — ადამიანები ჩამოსულიყვნენ ქართული სამზარეულოს სიყვარულით.</p>
+            <p>დღეს, 38 წლის შემდეგ, ჩვენ ვაგრძელებთ ამ ტრადიციას. რეცეპტები იგივეა — ხელწერილი, ადამიანისათვის გადაწოდებული. პროდუქტები — ახალი, ადგილობრივი. გულისხმიერება — ისეთივე, როგორც ბებიას სამზარეულოში.</p>
+          </div>
+          <div class="story-visual reveal">
+            <div class="story-emoji-wrap">
+              <div class="big-emoji">👨‍🍳</div>
+              <div class="story-badge">1987</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section with API -->
+    <section class="team-section">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">ჩვენი გუნდი</span>
+          <h2>ადამიანები <em>მიღმა</em></h2>
+        </header>
+        <div class="team-grid" id="teamGrid">
+          <!-- Populated by randomuser API -->
+          <div class="team-loading">გუნდი იტვირთება...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values-section">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">ჩვენი პრინციპები</span>
+          <h2>რამ <em>განგვსაზღვრა</em></h2>
+        </header>
+        <div class="values-grid">
+          <div class="value-item reveal">
+            <span class="value-num">01</span>
+            <h3>სიახლე</h3>
+            <p>ყოველდღიურად ახალი პროდუქტები, ყოველდღიური ინსპირაცია.</p>
+          </div>
+          <div class="value-item reveal" style="--delay:0.1s">
+            <span class="value-num">02</span>
+            <h3>ტრადიცია</h3>
+            <p>ქართული სამზარეულოს ორიგინალური გემო, ყოველ თაობაში.</p>
+          </div>
+          <div class="value-item reveal" style="--delay:0.2s">
+            <span class="value-num">03</span>
+            <h3>სათემო</h3>
+            <p>ადგილობრივი ფერმერები, მომწოდებლები, ადამიანები.</p>
+          </div>
+          <div class="value-item reveal" style="--delay:0.3s">
+            <span class="value-num">04</span>
+            <h3>სიყვარული</h3>
+            <p>ყოველ კერძში — ადამიანობა, სიზუსტე, სიამოვნება.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section reveal">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-num" data-target="38">0</span>
+            <span class="stat-label">წელი</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="120">0</span>
+            <span class="stat-label">ღვინის სახეობა</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="45">0</span>
+            <span class="stat-label">კერძი</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="50000">0</span>
+            <span class="stat-label">ბედნიერი სტუმარი</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-text">Tbilisi<em>Bites</em></span>
+          <p>ქართული სამზარეულოს სული.</p>
+        </div>
+        <nav class="footer-nav">
+          <h4>ნავიგაცია</h4>
+          <ul>
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="menu.html">მენიუ</a></li>
+            <li><a href="about.html">ჩვენს შესახებ</a></li>
+            <li><a href="contact.html">კონტაქტი</a></li>
+          </ul>
+        </nav>
+        <address class="footer-contact">
+          <h4>კონტაქტი</h4>
+          <p>📍 რუსთაველის გამზ. 22, თბილისი</p>
+          <p>📞 +995 32 222 33 44</p>
+          <p>🕐 12:00 – 24:00</p>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 TbilisiBites. ყველა უფლება დაცულია.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="ზემოთ">↑</button>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/team.js"></script>
+  <script src="./js/stats.js"></script>
+</body>
+</html>
